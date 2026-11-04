@@ -1,0 +1,26 @@
+# Easy Spectator 開発タスク
+
+- [ ] 1. プロジェクト構造とビルド設定の初期化
+  - [ ] `.gitignore` の作成（Gradle, IDE, OS, .agents）
+  - [ ] `gradlew`, `gradlew.bat`, `gradle/wrapper` の準備
+  - [ ] `settings.gradle`, `build.gradle`, `gradle.properties` の設定 (MC 26.3, Fabric, NeoForge, Common)
+- [ ] 2. Common モジュールの実装
+  - [ ] `EasySpectatorConfig.java`: 設定（`enabled`, `ignoreSpawnPoint`）の保存・読み込み
+  - [ ] `EasySpectatorCommon.java`: 共通状態管理、ロジック定義
+  - [ ] `EasySpectatorCommonTest.java`: 設定・判定ロジックのユニットテスト
+- [ ] 3. Fabric モジュールの実装
+  - [ ] `fabric/build.gradle` の依存・展開設定
+  - [ ] `mc_easy_spectator.mixins.json` および Mixin 定義
+    - `ServerPlayerRespawnMixin` または `PlayerListMixin`: 死亡リスポーン検知 (`keepEverything == false`)、スポーン設定解除、スペクテイターモード変更
+  - [ ] `EasySpectatorFabric.java` / `EasySpectatorFabricClient.java`: 初期化
+  - [ ] `EasySpectatorConfigScreen.java` & `ModMenuApi` 連携: バニラ標準 GUI 設定画面
+  - [ ] `fabric.mod.json`, 言語ファイル (`en_us.json`, `ja_jp.json`), アイコンアセット
+- [ ] 4. NeoForge モジュールの実装
+  - [ ] `neoforge/build.gradle` の設定
+  - [ ] `neoforge.mods.toml`, `mc_easy_spectator.neoforge.mixins.json`
+  - [ ] イベントハンドラ / Mixin による死亡リスポーン検知・スペクテイター化
+  - [ ] `IConfigScreenFactory` による Mods 一覧画面 Config 連携
+- [ ] 5. ビルドとテストの実行
+  - [ ] `./gradlew test`: ユニットテスト実行
+  - [ ] `./gradlew build`: Fabric / NeoForge 両ローダーの JAR ビルド検証
+- [ ] 6. 完了確認とコミット (ADR 記録)
