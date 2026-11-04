@@ -1,0 +1,6 @@
+{
+  "modmenu.descriptionTranslation.mc_easy_spectator": "死亡リスポーン時に自動的にスペクテイターモードへ切り替え、初期リスポーン位置へのリセットを行います。",
+  "gui.mc_easy_spectator.config.title": "Easy Spectator 設定",
+  "gui.mc_easy_spectator.config.enabled": "Mod機能",
+  "gui.mc_easy_spectator.config.ignore_spawn_point": "スポーン設定を無視"
+}

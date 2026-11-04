@@ -8,13 +8,13 @@
   - [x] `EasySpectatorConfig.java`: 設定（`enabled`, `ignoreSpawnPoint`）の保存・読み込み
   - [x] `EasySpectatorCommon.java`: 共通状態管理、ロジック定義
   - [x] `EasySpectatorCommonTest.java`: 設定・判定ロジックのユニットテスト
-- [ ] 3. Fabric モジュールの実装
-  - [ ] `fabric/build.gradle` の依存・展開設定
-  - [ ] `mc_easy_spectator.mixins.json` および Mixin 定義
-    - `ServerPlayerRespawnMixin` または `PlayerListMixin`: 死亡リスポーン検知 (`keepEverything == false`)、スポーン設定解除、スペクテイターモード変更
-  - [ ] `EasySpectatorFabric.java` / `EasySpectatorFabricClient.java`: 初期化
-  - [ ] `EasySpectatorConfigScreen.java` & `ModMenuApi` 連携: バニラ標準 GUI 設定画面
-  - [ ] `fabric.mod.json`, 言語ファイル (`en_us.json`, `ja_jp.json`), アイコンアセット
+- [x] 3. Fabric モジュールの実装
+  - [x] `fabric/build.gradle` の依存・展開設定
+  - [x] `mc_easy_spectator.mixins.json` および Mixin 定義
+    - `PlayerListMixin`: 死亡リスポーン検知 (`keepEverything == false`)、スポーン設定解除 (`setRespawnPosition(null, false)`)、スペクテイターモード変更
+  - [x] `EasySpectatorFabric.java`: 初期化
+  - [x] `EasySpectatorConfigScreen.java` & `ModMenuApi` 連携: バニラ標準 GUI 設定画面
+  - [x] `fabric.mod.json`, 言語ファイル (`en_us.json`, `ja_jp.json`), アイコンアセット
 - [ ] 4. NeoForge モジュールの実装
   - [ ] `neoforge/build.gradle` の設定
   - [ ] `neoforge.mods.toml`, `mc_easy_spectator.neoforge.mixins.json`
