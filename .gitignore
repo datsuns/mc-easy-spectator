@@ -25,6 +25,7 @@ logs/
 .DS_Store
 Thumbs.db
 _tmp/
+_temp/
 
 # Antigravity agent configuration
 .agents/
