@@ -1,0 +1,39 @@
+plugins {
+    id 'base'
+}
+
+allprojects {
+    group = project.maven_group
+    version = project.mod_version
+}
+
+subprojects {
+    repositories {
+        maven {
+            name = "Fabric"
+            url = "https://maven.fabricmc.net/"
+        }
+        maven {
+            name = "NeoForge"
+            url = "https://maven.neoforged.net/releases"
+        }
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        it.options.encoding = 'UTF-8'
+        it.options.release = 25
+    }
+
+    tasks.withType(ProcessResources).configureEach {
+        filteringCharset = 'UTF-8'
+    }
+
+    tasks.withType(Copy).configureEach {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+
+    tasks.withType(Jar).configureEach {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+}

@@ -1,13 +1,13 @@
 # Easy Spectator 開発タスク
 
-- [ ] 1. プロジェクト構造とビルド設定の初期化
-  - [ ] `.gitignore` の作成（Gradle, IDE, OS, .agents）
-  - [ ] `gradlew`, `gradlew.bat`, `gradle/wrapper` の準備
-  - [ ] `settings.gradle`, `build.gradle`, `gradle.properties` の設定 (MC 26.3, Fabric, NeoForge, Common)
-- [ ] 2. Common モジュールの実装
-  - [ ] `EasySpectatorConfig.java`: 設定（`enabled`, `ignoreSpawnPoint`）の保存・読み込み
-  - [ ] `EasySpectatorCommon.java`: 共通状態管理、ロジック定義
-  - [ ] `EasySpectatorCommonTest.java`: 設定・判定ロジックのユニットテスト
+- [x] 1. プロジェクト構造とビルド設定の初期化
+  - [x] `.gitignore` の作成（Gradle, IDE, OS, .agents）
+  - [x] `gradlew`, `gradlew.bat`, `gradle/wrapper` の準備
+  - [x] `settings.gradle`, `build.gradle`, `gradle.properties` の設定 (MC 26.3, Fabric, NeoForge, Common)
+- [x] 2. Common モジュールの実装
+  - [x] `EasySpectatorConfig.java`: 設定（`enabled`, `ignoreSpawnPoint`）の保存・読み込み
+  - [x] `EasySpectatorCommon.java`: 共通状態管理、ロジック定義
+  - [x] `EasySpectatorCommonTest.java`: 設定・判定ロジックのユニットテスト
 - [ ] 3. Fabric モジュールの実装
   - [ ] `fabric/build.gradle` の依存・展開設定
   - [ ] `mc_easy_spectator.mixins.json` および Mixin 定義
