@@ -15,12 +15,12 @@
   - [x] `EasySpectatorFabric.java`: 初期化
   - [x] `EasySpectatorConfigScreen.java` & `ModMenuApi` 連携: バニラ標準 GUI 設定画面
   - [x] `fabric.mod.json`, 言語ファイル (`en_us.json`, `ja_jp.json`), アイコンアセット
-- [ ] 4. NeoForge モジュールの実装
-  - [ ] `neoforge/build.gradle` の設定
-  - [ ] `neoforge.mods.toml`, `mc_easy_spectator.neoforge.mixins.json`
-  - [ ] イベントハンドラ / Mixin による死亡リスポーン検知・スペクテイター化
-  - [ ] `IConfigScreenFactory` による Mods 一覧画面 Config 連携
-- [ ] 5. ビルドとテストの実行
-  - [ ] `./gradlew test`: ユニットテスト実行
-  - [ ] `./gradlew build`: Fabric / NeoForge 両ローダーの JAR ビルド検証
-- [ ] 6. 完了確認とコミット (ADR 記録)
+- [x] 4. NeoForge モジュールの実装
+  - [x] `neoforge/build.gradle` の設定
+  - [x] `neoforge.mods.toml`, `mc_easy_spectator.neoforge.mixins.json`
+  - [x] イベントハンドラ / Mixin による死亡リスポーン検知・スペクテイター化
+  - [x] `IConfigScreenFactory` による Mods 一覧画面 Config 連携
+- [x] 5. ビルドとテストの実行
+  - [x] `./gradlew test`: ユニットテスト実行
+  - [x] `./gradlew build`: Fabric / NeoForge 両ローダーの JAR ビルド検証
+- [x] 6. 完了確認とコミット (ADR 記録)
