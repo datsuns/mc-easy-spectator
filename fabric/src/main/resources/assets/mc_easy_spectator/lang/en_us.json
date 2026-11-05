@@ -1,6 +1,6 @@
 {
   "modmenu.descriptionTranslation.mc_easy_spectator": "${mod_description}",
   "gui.mc_easy_spectator.config.title": "Easy Spectator Settings",
-  "gui.mc_easy_spectator.config.enabled": "Mod Enabled",
+  "gui.mc_easy_spectator.config.enabled": "Always Spectator",
   "gui.mc_easy_spectator.config.ignore_spawn_point": "Ignore Spawn Point"
 }
