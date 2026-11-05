@@ -2,6 +2,7 @@ package me.datsuns.easyspectator.fabric.gui;
 
 import me.datsuns.easyspectator.EasySpectatorCommon;
 import me.datsuns.easyspectator.EasySpectatorConfig;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.CycleButton;
 import net.minecraft.client.gui.screens.Screen;
@@ -9,6 +10,9 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 
 public class EasySpectatorConfigScreen extends Screen {
+    private static final Component YES_TEXT = CommonComponents.GUI_YES.copy().withStyle(ChatFormatting.GREEN, ChatFormatting.BOLD);
+    private static final Component NO_TEXT = CommonComponents.GUI_NO.copy().withStyle(ChatFormatting.RED, ChatFormatting.BOLD);
+
     private final Screen lastScreen;
     private boolean tempEnabled;
     private boolean tempIgnoreSpawnPoint;
@@ -25,13 +29,13 @@ public class EasySpectatorConfigScreen extends Screen {
         int centerX = this.width / 2;
         int startY = this.height / 4;
 
-        CycleButton<Boolean> enabledButton = CycleButton.onOffBuilder(this.tempEnabled)
+        CycleButton<Boolean> enabledButton = CycleButton.booleanBuilder(YES_TEXT, NO_TEXT, this.tempEnabled)
                 .create(centerX - 120, startY, 240, 20, Component.translatable("gui.mc_easy_spectator.config.enabled"), (button, value) -> {
                     this.tempEnabled = value;
                 });
         this.addRenderableWidget(enabledButton);
 
-        CycleButton<Boolean> ignoreSpawnButton = CycleButton.onOffBuilder(this.tempIgnoreSpawnPoint)
+        CycleButton<Boolean> ignoreSpawnButton = CycleButton.booleanBuilder(YES_TEXT, NO_TEXT, this.tempIgnoreSpawnPoint)
                 .create(centerX - 120, startY + 30, 240, 20, Component.translatable("gui.mc_easy_spectator.config.ignore_spawn_point"), (button, value) -> {
                     this.tempIgnoreSpawnPoint = value;
                 });
