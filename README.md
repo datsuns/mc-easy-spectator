@@ -1,28 +1,59 @@
 # Easy Spectator
 
-Minecraft Mod (Fabric & NeoForge for Minecraft 26.3) that forces spectator mode upon death respawn and resets spawn point back to the world spawn location.
+<p align="center">
+  <img src="modrinth_icon.png" width="128" height="128" alt="Easy Spectator Icon" />
+</p>
 
-## Features
+<p align="center">
+  <strong>Automatically forces Spectator Mode upon death respawn.</strong><br>
+  Available for Minecraft 26.3 on Fabric & NeoForge.
+</p>
 
-- **Forced Spectator on Death Respawn**:
-  - Automatically switches the player to `SPECTATOR` mode when respawning from death (`keepEverything == false`).
-  - Does **not** trigger when returning from the End portal after defeating the Ender Dragon (`keepEverything == true`).
-- **Ignore & Reset Personal Spawn Point**:
-  - Clears personal bed / respawn anchor configuration so players safely respawn at the world initial spawn point in the Overworld.
-  - Can be toggled in the configuration if you prefer respawning at your bed in spectator mode.
-- **In-Game Configuration Screen**:
-  - Integrated with **ModMenu** (Fabric) and the native **Mods List Config** button (NeoForge).
-  - Built with vanilla `Screen` widgets, requiring zero external config libraries (e.g. Cloth Config).
+<p align="center">
+  <strong>English</strong> | <a href="README.ja.md">日本語</a>
+</p>
 
-## Configuration Options
+---
 
-Saved in `config/mc_easy_spectator.properties`:
+**Easy Spectator** is a lightweight Minecraft mod that automatically switches players to **Spectator Mode (`SPECTATOR`)** when they respawn after dying.
 
-| Option | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `enabled` | `boolean` | `true` | Enables or disables the mod's death respawn spectator feature. |
-| `ignoreSpawnPoint` | `boolean` | `true` | `ON`: Clears bed spawn and respawns at world spawn point.<br>`OFF`: Respawns at registered bed/anchor. |
+It is ideal for hardcore-style challenge runs, elimination SMP events, and mini-games without requiring administrative commands or manual intervention. The mod includes a clean, native in-game configuration screen requiring zero external configuration dependencies.
 
-## License
+## 🌟 Features
 
-MIT License
+- 👻 **Forced Spectator on Death Respawn**
+  - Players automatically respawn in Spectator Mode when clicking the "Respawn" button after dying (`keepEverything == false`).
+  - Does **not** trigger when returning through the End portal after defeating the Ender Dragon (`keepEverything == true`). Players can safely return home in Survival Mode.
+- 📍 **Reset Personal Spawn Point to World Spawn**
+  - Automatically clears personal bed / respawn anchor registrations on death, safely respawning the player at the Overworld initial world spawn.
+  - Can be toggled off if you prefer players respawning at their registered bed or anchor as spectators.
+- ⚙️ **Native In-Game Configuration Screen**
+  - Built entirely using Minecraft's vanilla UI widgets—no heavy third-party libraries (such as Cloth Config) required.
+  - Accessible directly via **ModMenu** on Fabric or the **Mods > Config** button on NeoForge.
+  - Features high-visibility colored options (**Yes** in bold green, **No** in bold red).
+
+## 📸 Screenshot
+
+![Easy Spectator Config Screen](images/config-screen-en.png)
+
+## ⚙️ Configuration Options
+
+Settings can be modified via the in-game GUI or directly in `config/mc_easy_spectator.properties`:
+
+| GUI Label | Config Key | Type | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Always Spectator** | `enabled` | `boolean` | `true` | **Yes**: Forces Spectator Mode on death respawn.<br>**No**: Temporarily disables mod functionality. |
+| **Ignore Spawn Point** | `ignoreSpawnPoint` | `boolean` | `true` | **Yes**: Clears personal bed/anchor spawn and respawns at world spawn.<br>**No**: Keeps bed/anchor location as the respawn point. |
+
+## 📥 Requirements & Installation
+
+- **Minecraft Version**: 26.3
+- **Supported Loaders**:
+  - **Fabric**: Fabric Loader 0.19.3+ & Fabric API (ModMenu recommended for in-game settings GUI)
+  - **NeoForge**: NeoForge 26.3.0.3-beta+
+- **Environment**: Supports both Singleplayer and Dedicated Servers.
+  - When installed on a dedicated server, all connected players will automatically be switched to spectator mode upon death.
+
+## 📄 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
